@@ -9,8 +9,8 @@
 
 	<% @recipes.each do |recipe| %>
 		<tr class= <%= cycle('even','odd') %>>
-			<td><%= image_tag(recipe["image_url"])%></td>
-			<td><%= recipe["title"] %></td>
+			<td><a href= <%= recipe["source_url"] %>> <%= image_tag(recipe["image_url"])%></a></td>
+			<td><a href= <%= recipe["source_url"] %>> <%= sanitize recipe["title"] %></a></td>
 			<td><%= recipe["social_rank"] %> </td>
 		</tr>
 	<% end %>

@@ -1,5 +1,13 @@
 Capybara.default_driver = :poltergeist
 
+#got this random answer to fix Capybara::Poltergeist::JavascriptError:
+# from https://stackoverflow.com/questions/25673890/poltergeist-throws-js-errors-when-js-errors-false
+# and it worked!
+options = {js_errors: false}
+Capybara.register_driver :poltergeist do |app|
+  Capybara::Poltergeist::Driver.new(app, options)
+end
+
 Capybara.app_host = "http://localhost:3000"
 
 describe "Recipes App" do
