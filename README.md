@@ -1,3 +1,17 @@
+##Update: 10/9/2019
+I had completed the final assignment using latest rails 6.0.0, but can't pass final grading because the grading test suite was using based on 4 years older package.
+It already wasted my over 7 hours to trouble shoot, gave up, and build a new Linux machine on rails 4.2.8 so I can submit the final assignment 
+
+When using rails 4.2.8, there was an issue with default sqlite3 gem pulled on 1.4.1. This caused this error:
+Gem::LoadError: Specified 'sqlite3' for database adapter, but the gem is not loaded.
+
+After 3 hours of scratching my head and reinstall games multiple times as sqlite3 is apparently there, I found the following post:
+
+https://github.com/sparklemotion/sqlite3-ruby/issues/249
+
+Yeah, right it was a rails issue! I just need to force the bundle use 1.3.13 in the gemfile and the problem was solved.
+
+
 ## Assignment for Module #3: Recipe Finder
 
 The overall goal of this assignment is to implement a Rails application using model,
