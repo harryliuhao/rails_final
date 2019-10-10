@@ -1,4 +1,5 @@
-##Update: 10/9/2019
+## Update: 10/9/2019
+
 I had completed the final assignment using latest rails 6.0.0, but can't pass final grading because the grading test suite was using based on 4 years older package.
 It already wasted my over 7 hours to trouble shoot, gave up, and build a new Linux machine on rails 4.2.8 so I can submit the final assignment 
 
